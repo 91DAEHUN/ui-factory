@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../common/reset.css">
+    <link rel="stylesheet" href="../../common/common.css">
+    <link rel="stylesheet" href="accordion.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="accordion.js"></script>
+</head>
+<body>
+    <h1 class="atomic-title">organism > accordion</h1>
+    <h2 class="case-title">case 1</h2>
+    <ul class="case-list">
+        <li>type: single</li>
+        <li>animation: slide</li>
+    </ul>
+    <div class="accordion" data-accordion="accordion" data-accordion-view="single" data-accordion-ani="slide">
+        <div class="accordion-section">
+            <button type="button" class="accordion-section-button">Button1</button>
+            <div class="accordion-section-panel">
+                Panel1 Panel1 Panel1 Panel1 
+                Panel1 Panel1 Panel1 Panel1 
+                Panel1 Panel1 Panel1 Panel1 
+                Panel1 Panel1 Panel1 Panel1 
+                Panel1 Panel1 Panel1 Panel1 
+                Panel1 Panel1 Panel1 Panel1 
+                Panel1 Panel1 Panel1 Panel1 
+                Panel1 Panel1 Panel1 Panel1 
+                Panel1 Panel1 Panel1 Panel1 
+                Panel1 Panel1 Panel1 Panel1 
+            </div>
+        </div>
+        <div class="accordion-section">
+            <button type="button" class="accordion-section-button">Button2</button>
+            <div class="accordion-section-panel">
+                Panel2
+            </div>
+        </div>
+        <div class="accordion-section">
+            <button type="button" class="accordion-section-button">Button3</button>
+            <div class="accordion-section-panel">
+                Panel3
+            </div>
+        </div>
+    </div>
+    
+    <h2 class="case-title">case 2</h2>
+    <ul class="case-list">
+        <li>type: multi</li>
+        <li>animation: fadeIn</li>
+    </ul>
+    <div class="accordion" data-accordion="accordion" data-accordion-view="multi" data-accordion-ani="fadeIn">
+        <div class="accordion-section">
+            <button type="button" class="accordion-section-button">Button1</button>
+            <div class="accordion-section-panel">
+                Panel1
+            </div>
+        </div>
+        <div class="accordion-section">
+            <button type="button" class="accordion-section-button">Button2</button>
+            <div class="accordion-section-panel">
+                Panel2
+            </div>
+        </div>
+        <div class="accordion-section">
+            <button type="button" class="accordion-section-button">Button3</button>
+            <div class="accordion-section-panel">
+                Panel3
+            </div>
+        </div>
+    </div>
+    
+    <h2 class="case-title">case 3</h2>
+    <ul class="case-list">
+        <li>type: multi</li>
+        <li>animation: slide</li>
+    </ul>
+    <div class="accordion" data-accordion="accordion" data-accordion-view="multi" data-accordion-ani="slide">
+        <div class="accordion-section">
+            <button type="button" class="accordion-section-button">Button1</button>
+            <div class="accordion-section-panel">
+                Panel1
+            </div>
+        </div>
+        <div class="accordion-section">
+            <button type="button" class="accordion-section-button">Button2</button>
+            <div class="accordion-section-panel">
+                Panel2
+            </div>
+        </div>
+        <div class="accordion-section">
+            <button type="button" class="accordion-section-button">Button3</button>
+            <div class="accordion-section-panel">
+                Panel3
+            </div>
+        </div>
+    </div>
+</body>
+</html>
