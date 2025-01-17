@@ -1,0 +1,91 @@
+.input {
+  border: 1px solid var(--color-border-gray);
+  height: 40px;
+  width: 100%;
+  padding: 8px 14px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+  font: var(--font14);
+}
+.input-label{
+  position: absolute;
+  top:8px;
+  left: 14px;
+  cursor: pointer;
+  transition: all 0.5s;
+  color:var(--color-lightgray);
+}
+.input-text{
+  width: 100%;
+  height: 100%;
+}
+.input-btns{
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  margin-top: -8px;
+  display: flex;
+  align-items: center;
+}
+.input-close{
+  width: 16px;
+  height: 16px;
+  display: none;
+  position: relative;
+}
+.input-eye{
+  width: 16px;
+  height: 16px;
+  display: none;
+  position: relative;
+  margin-right: 8px;
+  z-index: 1;
+}
+.input-eye.on::after{
+  content: '';
+  width: 100%;
+  height: 1px;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  background-color: #333;
+}
+.input-close::before{
+  content:'';
+  background: url(../../../resources/images/btn-close.png) 0 0  no-repeat;
+  background-size: 16px auto;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top:0;  
+  right:0;
+}
+.input-eye::before{
+  content:'';
+  background: url(../../../resources/images/btn-eye.png) 0 0  no-repeat;
+  background-size: 16px auto;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top:0;  
+  right:0;
+}
+
+.input.active{
+  border: 1px solid var(--color-border-darkgray);
+}
+.input.active .input-label{
+  top: -10px;
+  left: 12px;
+  background: #fff;
+  padding: 0 4px;
+  color:var(--color-default);
+}
+.input.active.writing .input-close{
+  display: block;
+}
+.input.active.writing .input-eye{
+  display: block;
+}

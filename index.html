@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/common.css">
 </head>
 <body>
-    <a href="atomic/organism/accordion.html">accordion.html</a>
+    <script>
+        window.onload=function(){
+            includeHTML();
+        }
+        function includeHTML(){
+            let tags = document.querySelectorAll('*[data-include-status="ready"]');
+            let filename, xhttp;
+            // console.log(tags);
+            tags.forEach((ele) => {
+                filename = ele.getAttribute("data-include-html");
+                if(filename){
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function(){
+                        if(this.readyState==4 && this.status == 200){
+                            ele.innerHTML = this.responseText;
+                            ele.setAttribute("data-include-status","complete");
+                            includeHTML();
+                        }
+                    };
+                }
+                xhttp.open("GET",filename,true);
+                xhttp.send();
+                return;
+            });
+        }
+    </script>
+
+    <header data-include-status="ready" data-include-html="common/html/header.html">
+    </header>
+    
+    <main>
+        <dl class="atomic-list">
+            <dt>atomic > atom</dt>
+            <dd><a href="atomic/atom/input/input.html">input.html</a></dd>
+        </dl>
+
+        <dl class="atomic-list">
+            <dt>atomic > organism</dt>
+            <dd><a href="atomic/organism/accordion/accordion.html">accordion.html</a></dd>
+        </dl>
+        
+    </main>
+
+    <footer data-include-status="ready" data-include-html="common/html/footer.html">
+
+    </footer>
+
 </body>
 </html>
