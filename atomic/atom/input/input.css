@@ -8,19 +8,22 @@
   position: relative;
   font: var(--font14);
 }
-.input-label{
+
+.input-label {
   position: absolute;
-  top:8px;
+  top: 8px;
   left: 14px;
   cursor: pointer;
   transition: all 0.5s;
-  color:var(--color-lightgray);
+  color: var(--color-lightgray);
 }
-.input-text{
+
+.input-text {
   width: 100%;
   height: 100%;
 }
-.input-btns{
+
+.input-btns {
   position: absolute;
   top: 50%;
   right: 14px;
@@ -28,13 +31,15 @@
   display: flex;
   align-items: center;
 }
-.input-close{
+
+.input-close {
   width: 16px;
   height: 16px;
   display: none;
   position: relative;
 }
-.input-eye{
+
+.input-eye {
   width: 16px;
   height: 16px;
   display: none;
@@ -42,8 +47,9 @@
   margin-right: 8px;
   z-index: 1;
 }
-.input-eye.on::after{
-  content: '';
+
+.input-eye.on::after {
+  content: "";
   width: 100%;
   height: 1px;
   transform: rotate(-45deg);
@@ -52,40 +58,45 @@
   right: 0;
   background-color: #333;
 }
-.input-close::before{
-  content:'';
-  background: url(../../../resources/images/btn-close.png) 0 0  no-repeat;
+
+.input-close::before {
+  content: "";
+  background: url(../../../resources/images/btn-close.png) 0 0 no-repeat;
   background-size: 16px auto;
   width: 16px;
   height: 16px;
   position: absolute;
-  top:0;  
-  right:0;
-}
-.input-eye::before{
-  content:'';
-  background: url(../../../resources/images/btn-eye.png) 0 0  no-repeat;
-  background-size: 16px auto;
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top:0;  
-  right:0;
+  top: 0;
+  right: 0;
 }
 
-.input.active{
+.input-eye::before {
+  content: "";
+  background: url(../../../resources/images/btn-eye.png) 0 0 no-repeat;
+  background-size: 16px auto;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.input.active {
   border: 1px solid var(--color-border-darkgray);
 }
-.input.active .input-label{
+
+.input.active .input-label {
   top: -10px;
   left: 12px;
   background: #fff;
   padding: 0 4px;
-  color:var(--color-default);
+  color: var(--color-default);
 }
-.input.active.writing .input-close{
+
+.input.active.writing .input-close {
   display: block;
 }
-.input.active.writing .input-eye{
+
+.input.active.writing .input-eye {
   display: block;
-}
+}/*# sourceMappingURL=input.css.map */

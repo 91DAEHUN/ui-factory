@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../common/css/reset.css">
+    <link rel="stylesheet" href="../../../common/css/common.css">
+    <link rel="stylesheet" href="select.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="select.js"></script>
+</head>
+<body>
+    <script>
+        var selectTest;
+        $(function(){
+            selectTest = new select("#selectId",{});
+        })
+    </script>
+    <div class="select" id="selectId">
+        <button type="button" class="select-btn">Select</button>
+        <ul class="select-list">
+            <li class="select-option"><button type="button" data-value="Select" >Select</button></li>
+            <li class="select-option"><button type="button" data-value="Option 1" >Option 1</button></li>
+            <li class="select-option"><button type="button" data-value="Option 2" >Option 2</button></li>
+            <li class="select-option"><button type="button" data-value="Option 3" >Option 3</button></li>
+            <li class="select-option"><button type="button" data-value="Option 4" >Option 4</button></li>
+            <li class="select-option"><button type="button" data-value="Option 5" >Option 5</button></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wih5h=device-wih5h, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="common/css/reset.css">
     <link rel="stylesheet" href="common/css/common.css">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src=" https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <script>
@@ -15,7 +18,6 @@
         function includeHTML(){
             let tags = document.querySelectorAll('*[data-include-status="ready"]');
             let filename, xhttp;
-            // console.log(tags);
             tags.forEach((ele) => {
                 filename = ele.getAttribute("data-include-html");
                 if(filename){
@@ -34,21 +36,67 @@
             });
         }
     </script>
+    <script type="text/babel">
+
+        function ListItem(props){
+            let list = props.list;
+            return (
+                <p className="atomic-list-item"><a href={props.list.url}>{props.list.name}</a></p>
+            )
+        }
+        function List(props){
+            let atomicList= props.atomicList;
+            return (
+                <>
+                    {
+                        atomicList.map((item,i)=>{
+                            return(
+                                <div className="atomic-list">
+                                <h5>atomic - {item.title}</h5>
+                                {
+                                    item.list.map((list,i)=>{return <ListItem list={list}/>})
+                                }
+                                </div>
+                            )
+                        })
+                    }
+                </>
+            )
+        }
+        function App(){
+            let [atomicList, setAtomicList] = React.useState([]);
+            React.useEffect(()=> {
+                fetch("./file.json",{
+                        method:"GET"
+                    })
+                    .then((response) => response.json())
+                    .then((data) =>{
+                        setAtomicList(data);
+                    });
+            },[]);
+
+            console.log("atomicList::",atomicList)
+            return (
+                <>
+                    <List atomicList={atomicList}/>
+                </>
+            );
+        }
+                
+        ReactDOM.render(
+            <App/>
+            , document.querySelector("#root")
+        )
+    </script>
 
     <header data-include-status="ready" data-include-html="common/html/header.html">
     </header>
     
     <main>
-        <dl class="atomic-list">
-            <dt>atomic > atom</dt>
-            <dd><a href="atomic/atom/input/input.html">input.html</a></dd>
-        </dl>
+        <!-- atomic list출력 -->
+        <div id="root">
 
-        <dl class="atomic-list">
-            <dt>atomic > organism</dt>
-            <dd><a href="atomic/organism/accordion/accordion.html">accordion.html</a></dd>
-        </dl>
-        
+        </div>
     </main>
 
     <footer data-include-status="ready" data-include-html="common/html/footer.html">

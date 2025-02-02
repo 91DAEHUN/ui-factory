@@ -1,0 +1,48 @@
+.select {
+  position: relative;
+  font: var(--font14);
+}
+.select-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  text-align: left;
+  padding: 0 6px;
+}
+.select-btn:hover {
+  background-color: #eee;
+}
+.select-list {
+  width: 100%;
+  display: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  border: 1px solid #d1d1d1;
+  overflow: hidden;
+}
+.select-list.active {
+  display: block;
+}
+.select-option {
+  width: 100%;
+  border-bottom: 1px solid #d1d1d1;
+}
+.select-option:last-child {
+  border: 0;
+}
+.select-option.selected {
+  background-color: #eee;
+}
+.select-option button {
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  padding: 10px 6px;
+}
+.select-option button:hover {
+  background-color: #eee;
+}/*# sourceMappingURL=select.css.map */

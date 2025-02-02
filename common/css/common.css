@@ -23,6 +23,7 @@
     --color-default: #131313;
     --color-darkgray: #333333;
     --color-lightgray: #666666;
+    --color-white:#ffffff;
     --color-bg: #e1e1e1;
     --color-border-gray: #d1d1d1;
     --color-border-darkgray: #333333;
@@ -67,11 +68,11 @@ main{
     margin-top: 20px;
     min-height: 800px;
 }
-main .atomic-list dt{
+main .atomic-list h5{
     font: var(--font18);
     font-weight: bold;
 }
-main .atomic-list dd a{
+main .atomic-list .atomic-list-item a{
     font: var(--font16);
     text-decoration: underline;
 }

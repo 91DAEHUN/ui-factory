@@ -1,0 +1,45 @@
+.select{
+    $bgColor: #fff;
+    $activeColor: #eee;
+    $border:1px solid #d1d1d1;
+    $borderRadi:5px;
+    $selectHeight: 40px;
+    position: relative;
+    font: var(--font14);
+    &-btn{
+        width: 100%;
+        height: $selectHeight;
+        border-radius: $borderRadi;
+        background-color: $bgColor;
+        border:$border; 
+        text-align: left;
+        padding: 0 6px;
+        &:hover{background-color: $activeColor;}
+    }
+    &-list{
+        width: 100%;
+        display: none;
+        border-radius: $borderRadi;
+        position: absolute;
+        top:$selectHeight + 10px;
+        left: 0;
+        border:$border;
+        overflow: hidden;
+        &.active{
+            display: block;
+        }
+    }
+    &-option{
+        width: 100%;
+        border-bottom: $border;
+        &:last-child{border:0;}
+        &.selected{
+            background-color: $activeColor;
+        }
+        button{
+            text-align: left;
+            width: 100%; height: 100%;padding: 10px 6px;
+            &:hover{background-color: $activeColor;}
+        }
+    }
+}
