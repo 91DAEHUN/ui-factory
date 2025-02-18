@@ -1,0 +1,20 @@
+.tooltip {
+  position: relative;
+  width: 40px;
+  height: 24px;
+}
+.tooltip-box {
+  background-color: var(--color-white);
+  border: 1px solid;
+  padding: 10px;
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-icon:hover ~ .tooltip-box {
+  display: block;
+}/*# sourceMappingURL=tooltip.css.map */

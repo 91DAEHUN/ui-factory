@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../common/css/reset.css">
+    <link rel="stylesheet" href="../../../common/css/common.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="hamburger.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="menu-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="menu-container">
+        <button type="button" class="close">닫기</button>
+        <ul>
+            <li>Menu1</li>
+            <li>Menu2</li>
+            <li>Menu3</li>
+        </ul>
+    </div>
+
+    <script>
+        $(function(){
+            $(".menu-hamburger").on("click",function(){
+                $(".menu-container").addClass("on")
+            });
+
+            $(".menu-container").find(".close").on("click",function(){
+                $(".menu-container").removeClass("on")
+            })
+        })
+    </script>
+    
+</body>
+</html>

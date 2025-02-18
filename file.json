@@ -22,7 +22,12 @@
     },
     {
         "title":"module",
-        "list":[]
+        "list":[
+            {
+                "name":"tooltip",
+                "url":"atomic/module/tooltip/tooltip.html"
+            }
+        ]
     },
     {
         "title":"component",
@@ -38,6 +43,10 @@
             {
                 "name":"listRolling",
                 "url":"atomic/organism/listRolling/listRolling.html"
+            },
+            {
+                "name":"hamburger",
+                "url":"atomic/organism/hamburger/hamburger.html"
             }
         ]
     }
